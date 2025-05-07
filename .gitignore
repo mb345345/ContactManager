@@ -1,0 +1,62 @@
+# --------------------------
+# ASP.NET Core
+# --------------------------
+
+## Ignore build results
+bin/
+obj/
+out/
+
+## User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Logs
+*.log
+
+## OS generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+## Rider project files
+.idea/
+
+## Visual Studio Code
+.vscode/
+.vs/
+
+## ASP.NET published output
+wwwroot/dist/
+wwwroot/node_modules/
+
+# --------------------------
+# Node / Vite (React)
+# --------------------------
+
+# Node modules
+contactmanagerclient/node_modules/
+
+# Vite build output
+contactmanagerclient/dist/
+
+# Logs
+contactmanagerclient/npm-debug.log*
+contactmanagerclient/yarn-debug.log*
+contactmanagerclient/yarn-error.log*
+
+# Environment files
+contactmanagerclient/.env
+contactmanagerclient/.env.*.local
+
+# Editor directories and files
+contactmanagerclient/.vscode/
+contactmanagerclient/.DS_Store
+
+# Dependency lock files (optional if using a single lock system)
+# Uncomment only if you're using just npm or just yarn/pnpm
+# contactmanagerclient/package-lock.json
+# contactmanagerclient/yarn.lock
+# contactmanagerclient/pnpm-lock.yaml
