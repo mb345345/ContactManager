@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\ContactManagerBll\ContactManagerBll.csproj" />
+    <ProjectReference Include="..\ContactManagerModel\ContactManagerModel.csproj" />
   </ItemGroup>
 
 </Project>
