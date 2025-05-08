@@ -1,11 +1,13 @@
-import WeatherForecast from './WeatherForecast';
+import { Routes, Route } from 'react-router-dom';
+import Home from './pages/Home';
+import About from './pages/About';
 
 function App() {
   return (
-    <div>
-      <h1>Hello from React</h1>
-      <WeatherForecast />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+    </Routes>
   );
 }
 
