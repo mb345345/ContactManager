@@ -19,11 +19,6 @@ namespace ContactManagerBll
             this.companyDal = companyDal;
         }
 
-        public CompanyManager()
-        {
-            companyDal = new CompanyDal();
-        }
-
         public List<Company> ReadCompanies()
         {
             return companyDal.ReadCompanies();

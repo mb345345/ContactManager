@@ -12,6 +12,13 @@ namespace ContactManagerDal
 {
     public class CompanyDal : ICompanyDal
     {
+        private readonly string connectionString;
+
+        public CompanyDal(string connectionString)
+        {
+            this.connectionString = connectionString;
+        }
+
         public List<Company> ReadCompanies()
         {
             List<Company> companies = new List<Company>();
@@ -19,8 +26,6 @@ namespace ContactManagerDal
             // connect to db
             try
             {
-                string connectionString = "Server=(localdb)\\IrapuatoSql;Database=ContactManager;Trusted_Connection=True;MultipleActiveResultSets=true";
-
                 using (SqlConnection sqlConnection = new SqlConnection(connectionString))
                 {
                     // Creating the command object

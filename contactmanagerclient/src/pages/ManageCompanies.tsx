@@ -30,8 +30,8 @@ function ManageCompanies () {
                     <tbody>
                     {companies.map((company, index) => (
                         <tr key={index}>
-                            <td>{company.companyName}</td>
-                            <td><a href="#" className="edit-link">Edit</a></td>
+                            <td className="content">{company.companyName}</td>
+                            <td className="link-column">[&nbsp;<a href="#" className="edit-link">Edit</a>&nbsp;]</td>
                         </tr>
                     ))}
                     </tbody>

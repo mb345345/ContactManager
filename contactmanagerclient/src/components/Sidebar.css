@@ -3,14 +3,16 @@
   background-color: #f0f0f0;
   padding: 1rem;
   font-family: Tahoma, sans-serif;
-  font-size: 14px; /* about 11pt */
+  font-size: 12px; /* about 11pt */
   color: #0077cc; /* consistent with main app */
 }
 
+/*
 .sidebar h2 {
   margin-top: 0;
   font-size: 16px;
 }
+*/
 
 .sidebar ul {
   list-style: none;

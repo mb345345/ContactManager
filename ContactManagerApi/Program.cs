@@ -11,9 +11,17 @@ namespace ContactManagerApi
         {
             var builder = WebApplication.CreateBuilder(args);
 
+            builder.Configuration
+                .AddJsonFile("appsettings.json", optional: false)
+                .AddJsonFile($"appsettings.{builder.Environment.EnvironmentName}.json", optional: true)
+                .AddUserSecrets<Program>(optional: true) // For local dev secrets
+                .AddEnvironmentVariables(); // For container and Azure
+
             // di registration
             builder.Services.AddScoped<ICompanyManager, CompanyManager>();
-            builder.Services.AddScoped<ICompanyDal, CompanyDal>();
+
+            var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+            builder.Services.AddScoped<ICompanyDal, CompanyDal>(sp => new CompanyDal(connectionString));
 
             // add cors policy
             builder.Services.AddCors(options =>

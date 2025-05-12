@@ -11,9 +11,9 @@ namespace ContactManagerApi.Controllers
     {
         private readonly ICompanyManager companyManager;
 
-        public ReadCompaniesController()
+        public ReadCompaniesController(ICompanyManager companyManager)
         {
-            companyManager = new CompanyManager();
+            this.companyManager = companyManager;
         }
 
         public IActionResult Index()
