@@ -32,6 +32,10 @@ Desktop.ini
 wwwroot/dist/
 wwwroot/node_modules/
 
+## publish
+publish/
+ContactManagerApi/app.zip
+
 # --------------------------
 # Node / Vite (React)
 # --------------------------
