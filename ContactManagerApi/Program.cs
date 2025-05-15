@@ -26,6 +26,10 @@ namespace ContactManagerApi
             builder.Services.AddScoped<ICompanyManager, CompanyManager>();
 
             var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+
+            // #debug
+            // Console.WriteLine($"#debug connectionString: {connectionString}");
+
             builder.Services.AddScoped<ICompanyDal, CompanyDal>(sp => new CompanyDal(connectionString));
 
             // get url of web front end eg. "http://localhost:5173"
