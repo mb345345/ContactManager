@@ -10,7 +10,8 @@ function ManageCompanies () {
     const [companies, setCompanies] = useState<Company[]>([]);
 
     useEffect(() => {
-        axios.get<Company[]>('https://localhost:7183/readcompanies')
+        const apiBase = import.meta.env.VITE_API_BASE_URL;
+        axios.get<Company[]>(`${apiBase}/readcompanies`)
           .then(response => setCompanies(response.data))
           .catch(error => console.error('Error fetching companies:', error));
       }, []);
